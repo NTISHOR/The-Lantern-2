@@ -7,132 +7,185 @@
     body {
       background: url('https://upload.wikimedia.org/wikipedia/commons/0/02/Deep_Space_Background.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: white;
-      font-family: 'Georgia', serif;
-      padding: 40px;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
       text-align: center;
+      padding: 40px 20px;
     }
 
     h1 {
+      font-size: 2.5rem;
       margin-bottom: 20px;
     }
 
     .question {
-      margin-bottom: 30px;
+      margin: 30px auto;
+      max-width: 800px;
+      text-align: left;
+      font-size: 1.2rem;
     }
 
-    label {
-      display: block;
-      margin: 8px 0;
-      cursor: pointer;
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: none;
     }
 
     button {
-      padding: 12px 24px;
+      margin-top: 40px;
+      padding: 12px 30px;
       font-size: 1rem;
       border: none;
-      background-color: #00FF00;
-      color: black;
-      font-weight: bold;
       border-radius: 8px;
+      background-color: #00ffcc;
+      color: #000;
       cursor: pointer;
-      margin-top: 20px;
     }
 
     .result {
       margin-top: 40px;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: bold;
     }
+
+    .red { color: #ff3b3b; }
+    .green { color: #00ff00; }
+    .yellow { color: #ffeb3b; }
+    .blue { color: #00bfff; }
+    .violet { color: #ee82ee; }
+    .indigo { color: #4b0082; }
+    .orange { color: #ffa500; }
+    .black { color: #aaa; }
+    .white { color: #fff; }
   </style>
 </head>
 <body>
 
-  <h1>Which Lantern Corps Do You Belong To?</h1>
+  <h1>Discover Your Lantern Corps</h1>
 
-  <form id="quizForm">
-    <div class="question">
-      <p><strong>1. What drives you most?</strong></p>
-      <label><input type="radio" name="q1" value="A"> Justice</label>
-      <label><input type="radio" name="q1" value="B"> Hope</label>
-      <label><input type="radio" name="q1" value="C"> Love</label>
-      <label><input type="radio" name="q1" value="D"> Anger</label>
-      <label><input type="radio" name="q1" value="E"> Fear</label>
-      <label><input type="radio" name="q1" value="F"> Knowledge</label>
-      <label><input type="radio" name="q1" value="G"> Compassion</label>
-      <label><input type="radio" name="q1" value="H"> Greed</label>
-      <label><input type="radio" name="q1" value="I"> Survival</label>
-    </div>
+  <div class="question">
+    <label>1. What drives you most?</label>
+    <select id="q1">
+      <option value="">-- Select --</option>
+      <option value="justice">A) Justice</option>
+      <option value="hope">B) Hope</option>
+      <option value="love">C) Love</option>
+      <option value="anger">D) Anger</option>
+      <option value="fear">E) Fear</option>
+      <option value="knowledge">F) Knowledge</option>
+      <option value="compassion">G) Compassion</option>
+      <option value="greed">H) Greed</option>
+      <option value="survival">I) Survival</option>
+    </select>
+  </div>
 
-    <div class="question">
-      <p><strong>2. What’s your greatest strength?</strong></p>
-      <label><input type="radio" name="q2" value="A"> Willpower</label>
-      <label><input type="radio" name="q2" value="B"> Empathy</label>
-      <label><input type="radio" name="q2" value="C"> Determination</label>
-      <label><input type="radio" name="q2" value="D"> Leadership</label>
-      <label><input type="radio" name="q2" value="E"> Fearlessness</label>
-      <label><input type="radio" name="q2" value="F"> Loyalty</label>
-      <label><input type="radio" name="q2" value="G"> Passion</label>
-      <label><input type="radio" name="q2" value="H"> Resourcefulness</label>
-      <label><input type="radio" name="q2" value="I"> Independence</label>
-    </div>
+  <div class="question">
+    <label>2. What’s your greatest strength?</label>
+    <select id="q2">
+      <option value="">-- Select --</option>
+      <option value="willpower">A) Willpower</option>
+      <option value="empathy">B) Empathy</option>
+      <option value="determination">C) Determination</option>
+      <option value="leadership">D) Leadership</option>
+      <option value="fearlessness">E) Fearlessness</option>
+      <option value="loyalty">F) Loyalty</option>
+      <option value="passion">G) Passion</option>
+      <option value="resourcefulness">H) Resourcefulness</option>
+      <option value="independence">I) Independence</option>
+    </select>
+  </div>
 
-    <div class="question">
-      <p><strong>3. What do you fear the most?</strong></p>
-      <label><input type="radio" name="q3" value="A"> Failure</label>
-      <label><input type="radio" name="q3" value="B"> Being forgotten</label>
-      <label><input type="radio" name="q3" value="C"> Losing loved ones</label>
-      <label><input type="radio" name="q3" value="D"> Injustice</label>
-      <label><input type="radio" name="q3" value="E"> Being powerless</label>
-      <label><input type="radio" name="q3" value="F"> Being alone</label>
-      <label><input type="radio" name="q3" value="G"> Chaos</label>
-      <label><input type="radio" name="q3" value="H"> Poverty</label>
-      <label><input type="radio" name="q3" value="I"> Death</label>
-    </div>
+  <div class="question">
+    <label>3. What do you fear the most?</label>
+    <select id="q3">
+      <option value="">-- Select --</option>
+      <option value="failure">A) Failure</option>
+      <option value="forgotten">B) Being forgotten</option>
+      <option value="losing_loved">C) Losing loved ones</option>
+      <option value="injustice">D) Injustice</option>
+      <option value="powerless">E) Being powerless</option>
+      <option value="alone">F) Being alone</option>
+      <option value="chaos">G) Chaos</option>
+      <option value="poverty">H) Poverty</option>
+      <option value="death">I) Death</option>
+    </select>
+  </div>
 
-    <button type="button" onclick="getResult()">Find My Corps</button>
-  </form>
+  <button onclick="getResult()">Reveal My Corps</button>
 
   <div class="result" id="result"></div>
 
   <script>
     function getResult() {
-      const q1 = document.querySelector('input[name="q1"]:checked');
-      const q2 = document.querySelector('input[name="q2"]:checked');
-      const q3 = document.querySelector('input[name="q3"]:checked');
+      const q1 = document.getElementById("q1").value;
+      const q2 = document.getElementById("q2").value;
+      const q3 = document.getElementById("q3").value;
 
       if (!q1 || !q2 || !q3) {
-        document.getElementById('result').innerHTML = "Please answer all questions.";
+        document.getElementById("result").innerHTML = "Please answer all questions!";
         return;
       }
 
-      // Logic based on combinations
-      const combo = q1.value + q2.value + q3.value;
-      let result = "";
+      let score = {
+        green: 0, red: 0, orange: 0, yellow: 0, blue: 0,
+        violet: 0, indigo: 0, black: 0, white: 0
+      };
 
-      if (q1.value === "D" && q2.value === "E" && q3.value === "C") {
-        result = "You belong to the <span style='color:#FF2D2D'>Red Lantern Corps</span> – Fueled by RAGE!";
-      } else if (q1.value === "A" || q2.value === "A") {
-        result = "You belong to the <span style='color:#00FF00'>Green Lantern Corps</span> – Powered by WILL!";
-      } else if (q1.value === "B" || q2.value === "F") {
-        result = "You belong to the <span style='color:#00BFFF'>Blue Lantern Corps</span> – Radiating HOPE!";
-      } else if (q1.value === "C" || q2.value === "B") {
-        result = "You belong to the <span style='color:#EE82EE'>Star Sapphires</span> – Guided by LOVE!";
-      } else if (q1.value === "E" || q2.value === "D") {
-        result = "You belong to the <span style='color:#FFD700'>Sinestro Corps</span> – Masters of FEAR!";
-      } else if (q1.value === "H" || q2.value === "H") {
-        result = "You belong to the <span style='color:#FFA500'>Orange Lantern Corps</span> – Driven by GREED!";
-      } else if (q1.value === "G" || q2.value === "B") {
-        result = "You belong to the <span style='color:#4B0082'>Indigo Tribe</span> – Compassion is your light.";
-      } else if (q1.value === "I" || q3.value === "I") {
-        result = "You belong to the <span style='color:#FFFFFF'>White Lantern Corps</span> – Bearer of LIFE!";
-      } else if (q3.value === "I") {
-        result = "You belong to the <span style='color:#AAAAAA'>Black Lantern Corps</span> – Harbinger of DEATH!";
-      } else {
-        result = "You're a mysterious mix… perhaps destined to wield the full Emotional Spectrum!";
-      }
+      // Question 1 mapping (what drives you)
+      if (q1 === "justice") score.green++;
+      if (q1 === "hope") score.blue++;
+      if (q1 === "love") score.violet++;
+      if (q1 === "anger") score.red++;
+      if (q1 === "fear") score.yellow++;
+      if (q1 === "knowledge") score.indigo++;
+      if (q1 === "compassion") score.indigo++;
+      if (q1 === "greed") score.orange++;
+      if (q1 === "survival") score.white++;
 
-      document.getElementById('result').innerHTML = result;
+      // Question 2 mapping (strength)
+      if (q2 === "willpower") score.green++;
+      if (q2 === "empathy") score.indigo++;
+      if (q2 === "determination") score.blue++;
+      if (q2 === "leadership") score.white++;
+      if (q2 === "fearlessness") score.red++;
+      if (q2 === "loyalty") score.violet++;
+      if (q2 === "passion") score.red++;
+      if (q2 === "resourcefulness") score.orange++;
+      if (q2 === "independence") score.black++;
+
+      // Question 3 mapping (fear)
+      if (q3 === "failure") score.green++;
+      if (q3 === "forgotten") score.black++;
+      if (q3 === "losing_loved") score.red++;
+      if (q3 === "injustice") score.yellow++;
+      if (q3 === "powerless") score.blue++;
+      if (q3 === "alone") score.indigo++;
+      if (q3 === "chaos") score.white++;
+      if (q3 === "poverty") score.orange++;
+      if (q3 === "death") score.black++;
+
+      // Get highest score
+      let highest = Object.entries(score).sort((a, b) => b[1] - a[1])[0][0];
+
+      const corpsNames = {
+        green: "Green Lantern (Willpower)",
+        red: "Red Lantern (Rage)",
+        orange: "Orange Lantern (Avarice)",
+        yellow: "Sinestro Corps (Fear)",
+        blue: "Blue Lantern (Hope)",
+        violet: "Star Sapphire (Love)",
+        indigo: "Indigo Tribe (Compassion)",
+        black: "Black Lantern (Death)",
+        white: "White Lantern (Life)"
+      };
+
+      const colorClass = highest;
+
+      document.getElementById("result").innerHTML = 
+        You belong to the <span class="${colorClass}">${corpsNames[highest]}</span>!;
     }
   </script>
 
